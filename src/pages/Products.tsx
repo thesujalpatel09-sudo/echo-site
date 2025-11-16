@@ -55,12 +55,13 @@ const Products = () => {
     },
     {
       name: "Packaging Material",
-      description: "Premium packaging materials including cake boxes and pizza boxes for food packaging solutions",
-      items: ["Cake Box", "Pizza Box"],
+      description: "Premium packaging materials including cake boxes, pizza boxes, and cake bases for food packaging solutions",
+      items: ["Cake Box", "Pizza Box", "Cake Base"],
       image: "https://uhbvqqeoujmoyqtkompi.supabase.co/storage/v1/object/public/Company%20logo/WhatsApp%20Image%202025-11-16%20at%208.54.25%20PM.jpeg",
       subcategories: [
         "Cake Box",
-        "Pizza Box"
+        "Pizza Box",
+        "Cake Base"
       ]
     },
     {

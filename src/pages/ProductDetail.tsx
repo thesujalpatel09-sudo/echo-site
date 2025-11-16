@@ -206,6 +206,12 @@ const ProductDetail = () => {
               image: "https://uhbvqqeoujmoyqtkompi.supabase.co/storage/v1/object/public/Company%20logo/WhatsApp%20Image%202025-11-16%20at%209.04.00%20PM.jpeg",
               description: "High-quality pizza boxes for food delivery and takeout. Available in various sizes to accommodate different pizza sizes.",
               features: ["Various Sizes", "Grease Resistant", "Food Safe", "Stackable"]
+            },
+            {
+              name: "Cake Base",
+              image: "https://uhbvqqeoujmoyqtkompi.supabase.co/storage/v1/object/public/Company%20logo/7-inch.jpg",
+              description: "Premium cake bases for bakery products. Available in various sizes to fit different cake dimensions.",
+              features: ["Various Sizes", "Secure Closure", "Food Safe", "Durable"]
             }
           ]
         }
