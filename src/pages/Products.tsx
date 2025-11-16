@@ -55,11 +55,11 @@ const Products = () => {
     },
     {
       name: "Cake and Bakery",
-      description: "Premium cake boxes and bakery packaging solutions in various sizes",
-      items: ["Cake Box"],
+      description: "Premium cake bases and bakery packaging solutions in various sizes",
+      items: ["Cake Base"],
       image: "https://uhbvqqeoujmoyqtkompi.supabase.co/storage/v1/object/public/Company%20logo/7-inch.jpg",
       subcategories: [
-        "Cake Box"
+        "Cake Base"
       ]
     },
     {

@@ -193,12 +193,12 @@ const ProductDetail = () => {
     "cake-bakery": {
       categories: [
         {
-          name: "Cake Box",
+          name: "Cake Base",
           products: [
             {
-              name: "Cake Box",
+              name: "Cake Base",
               image: "https://uhbvqqeoujmoyqtkompi.supabase.co/storage/v1/object/public/Company%20logo/7-inch.jpg",
-              description: "Premium cake boxes for bakery products. Available in various sizes to fit different cake dimensions.",
+              description: "Premium cake bases for bakery products. Available in various sizes to fit different cake dimensions.",
               features: ["Various Sizes", "Secure Closure", "Food Safe", "Durable"]
             }
           ]
