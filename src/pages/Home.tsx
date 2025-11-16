@@ -1,98 +1,49 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { MapPin } from "lucide-react";
+import ContactFormSection from "@/components/ContactFormSection";
+import thermalRolls from "@/assets/thermal-rolls.jpg";
+import labels from "@/assets/labels.jpg";
+import ribbons from "@/assets/ribbons.jpg";
+import posRolls from "@/assets/pos-rolls.jpg";
+import officeSupplies from "@/assets/office-supplies.jpg";
+import printerConsumables from "@/assets/printer-consumables.jpg";
+import packaging from "@/assets/packaging.jpg";
+import tapes from "@/assets/tapes.jpg";
+import heroImage from "@/assets/hero-paper-rolls.jpg";
+import productShowcase from "@/assets/product-showcase.jpg";
 
 const Home = () => {
   const products = [
-    { name: "Thermal Paper Rolls", image: "thermal-rolls" },
-    { name: "Thermal Transfer Paper", image: "thermal-transfer" },
-    { name: "Pricing Labels Plain & Printed", image: "pricing-labels" },
-    { name: "Thermal Transfer Labels", image: "transfer-labels" },
-    { name: "Thermal Paper Roll All Sizes", image: "paper-rolls" },
-    { name: "Wax Ribbons, Resin", image: "wax-ribbons" },
-    { name: "POS Paper Rolls", image: "pos-rolls" },
-    { name: "Toner Cartridge", image: "toner" },
-    { name: "Masking Tape", image: "tape" },
-    { name: "Printer Ink Cartridges", image: "ink" },
+    { name: "Thermal Paper Rolls", image: thermalRolls },
+    { name: "Thermal Transfer Labels", image: labels },
+    { name: "Pricing Labels Plain & Printed", image: labels },
+    { name: "Thermal Transfer Labels", image: labels },
+    { name: "Thermal Paper Roll All Sizes", image: posRolls },
+    { name: "Wax Ribbons, Resin", image: ribbons },
+    { name: "POS Paper Rolls", image: posRolls },
+    { name: "Toner Cartridge", image: printerConsumables },
+    { name: "Masking Tape", image: tapes },
+    { name: "Printer Ink Cartridges", image: printerConsumables },
   ];
 
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-hero-gradient-from to-hero-gradient-to text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-1/2 h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCAwTDEwMCAxMDBNMTAwIDBMMCAxMDAiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMSIvPjwvc3ZnPg==')]" />
-        </div>
+      <section className="relative bg-gradient-to-br from-hero-gradient-from to-hero-gradient-to text-white py-32 overflow-hidden">
+        <div 
+          className="absolute inset-0 opacity-20 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
         
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-lg mb-2 uppercase tracking-wide">WELCOME TO AL KAHF GENERAL TRADING LLC</p>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Leading POS Consumables & Stationery Supplier in UAE
-              </h1>
-              <Button variant="outline" className="bg-white text-primary hover:bg-gray-100 border-2 border-white">
-                MORE DETAILS
-              </Button>
-            </div>
-
-            {/* Contact Form */}
-            <Card className="bg-white">
-              <CardContent className="p-6">
-                <form className="space-y-4">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="text-sm font-medium text-foreground mb-1 block">Your name</label>
-                      <Input placeholder="" className="border-gray-300" />
-                    </div>
-                    <div>
-                      <label className="text-sm font-medium text-foreground mb-1 block">Your email</label>
-                      <Input type="email" placeholder="" className="border-gray-300" />
-                    </div>
-                  </div>
-                  
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="text-sm font-medium text-foreground mb-1 block">Mobile Number</label>
-                      <Input placeholder="" className="border-gray-300" />
-                    </div>
-                    <div>
-                      <label className="text-sm font-medium text-foreground mb-1 block">Select Product</label>
-                      <Select>
-                        <SelectTrigger className="border-gray-300">
-                          <SelectValue placeholder="-Select-" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="thermal">Thermal Paper Rolls</SelectItem>
-                          <SelectItem value="labels">Labels</SelectItem>
-                          <SelectItem value="ribbons">Ribbons</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-1 block">Your message (Product Query)</label>
-                    <Textarea rows={3} className="border-gray-300 resize-none" />
-                  </div>
-
-                  <div className="bg-gray-200 p-3 rounded flex items-center justify-between">
-                    <span className="text-lg font-mono font-bold">4×#7~</span>
-                    <Button variant="ghost" size="sm">↻</Button>
-                  </div>
-
-                  <Input placeholder="Enter CAPTCHA answer" className="border-gray-300" />
-
-                  <Button className="w-full bg-primary hover:bg-secondary text-primary-foreground">
-                    SUBMIT
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-          </div>
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <p className="text-xl mb-4 uppercase tracking-wide">WELCOME TO AL KAHF GENERAL TRADING LLC</p>
+          <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight max-w-5xl mx-auto">
+            Leading POS Consumables & Stationery Supplier in UAE
+          </h1>
+          <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-gray-100 border-2 border-white text-lg px-8 py-6">
+            MORE DETAILS
+          </Button>
         </div>
         
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-white" style={{ clipPath: "polygon(0 50%, 100% 0, 100% 100%, 0 100%)" }} />
@@ -106,11 +57,17 @@ const Home = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((product, index) => (
               <Card key={index} className="border-2 border-primary rounded-3xl overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
-                <CardContent className="p-6">
-                  <div className="aspect-square bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
-                    <div className="text-gray-400 text-center text-sm">{product.name}</div>
+                <CardContent className="p-0">
+                  <div className="aspect-square bg-gray-100 overflow-hidden">
+                    <img 
+                      src={product.image} 
+                      alt={product.name}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform"
+                    />
                   </div>
-                  <h3 className="text-center font-semibold text-foreground">{product.name}</h3>
+                  <div className="p-4">
+                    <h3 className="text-center font-semibold text-foreground">{product.name}</h3>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -142,27 +99,12 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="bg-primary rounded-lg p-8 h-96 flex items-center justify-center">
-                <div className="relative w-full h-full">
-                  {[
-                    { top: "10%", left: "20%" },
-                    { top: "15%", left: "70%" },
-                    { top: "30%", left: "40%" },
-                    { top: "45%", left: "15%" },
-                    { top: "50%", left: "75%" },
-                    { top: "65%", left: "45%" },
-                    { top: "70%", left: "85%" },
-                  ].map((pos, i) => (
-                    <MapPin
-                      key={i}
-                      className="absolute w-8 h-8 text-red-500 fill-red-500 animate-pulse"
-                      style={{ top: pos.top, left: pos.left }}
-                    />
-                  ))}
-                  <div className="absolute inset-0 opacity-20 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGV4dCB4PSI0MDAiIHk9IjIwMCIgZm9udC1zaXplPSI0MCIgZmlsbD0id2hpdGUiIHRleHQtYW5jaG9yPSJtaWRkbGUiPldvcmxkIE1hcDwvdGV4dD48L3N2Zz4=')]" />
-                </div>
-              </div>
+            <div className="relative rounded-lg overflow-hidden shadow-lg">
+              <img 
+                src={productShowcase} 
+                alt="Paper products showcase"
+                className="w-full h-96 object-cover"
+              />
             </div>
           </div>
         </div>
@@ -207,6 +149,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Contact Form Section - Above Footer */}
+      <ContactFormSection />
     </div>
   );
 };
