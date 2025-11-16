@@ -224,6 +224,17 @@ const ProductDetail = () => {
               features: ["Various Sizes", "Secure Closure", "Food Safe", "Durable"]
             }
           ]
+        },
+        {
+          name: "Paper Bag",
+          products: [
+            {
+              name: "Paper Bag",
+              image: "https://uhbvqqeoujmoyqtkompi.supabase.co/storage/v1/object/public/Company%20logo/WhatsApp%20Image%202025-11-16%20at%209.09.37%20PM.jpeg",
+              description: "Eco-friendly paper bags for retail, grocery, and food packaging. Available in various sizes and styles.",
+              features: ["Eco-Friendly", "Various Sizes", "Durable", "Reusable"]
+            }
+          ]
         }
       ]
     }
