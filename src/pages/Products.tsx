@@ -7,6 +7,14 @@ import { Search } from "lucide-react";
 const Products = () => {
   const navigate = useNavigate();
 
+  // Map product names to their route paths
+  const productRouteMap: Record<string, string> = {
+    "Disposable Glass": "/products/glass",
+    "Disposable Plate & Bowl": "/products/disposable-plate-bowl",
+    "Cutlery": "/products/cutlery",
+    "Cake and Bakery": "/products/cake-bakery",
+  };
+
   const productCategories = [
     {
       name: "Disposable Glass",
@@ -19,6 +27,39 @@ const Products = () => {
         "Ripple Paper Cup",
         "Double Wall Paper Cup",
         "Lid For Paper Cups"
+      ]
+    },
+    {
+      name: "Disposable Plate & Bowl",
+      description: "Eco-friendly disposable plates and bowls including areca, bagasse, paper, pinewood, and sal leaf products",
+      items: ["Areca Products", "Bagasse Products", "Paper Products", "Pinewood Products", "Sal Leaf Products"],
+      image: "https://uhbvqqeoujmoyqtkompi.supabase.co/storage/v1/object/public/Company%20logo/5inchroundbowl.jpg",
+      subcategories: [
+        "Areca Products",
+        "Bagasse Products",
+        "Paper Products",
+        "Pinewood Products",
+        "Sal Leaf Products"
+      ]
+    },
+    {
+      name: "Cutlery",
+      description: "High-quality cutlery options including plastic, wooden, and biodegradable corn starch cutlery",
+      items: ["Plastic Cutlery", "Wooden Cutlery", "Biodegradable Corn Starch Cutlery"],
+      image: "https://uhbvqqeoujmoyqtkompi.supabase.co/storage/v1/object/public/Company%20logo/71pye4fAqML._SL1500_.jpg",
+      subcategories: [
+        "Plastic Cutlery",
+        "Wooden Cutlery",
+        "Biodegradable Corn Starch Cutlery"
+      ]
+    },
+    {
+      name: "Cake and Bakery",
+      description: "Premium cake boxes and bakery packaging solutions in various sizes",
+      items: ["Cake Box"],
+      image: "https://uhbvqqeoujmoyqtkompi.supabase.co/storage/v1/object/public/Company%20logo/7-inch.jpg",
+      subcategories: [
+        "Cake Box"
       ]
     },
     {
@@ -128,23 +169,22 @@ const Products = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {productCategories.map((category, index) => {
-              const isDisposableGlass = category.name === "Disposable Glass";
+              const hasRoute = productRouteMap[category.name];
               
               return (
               <Card 
                 key={index} 
                 className={`hover:shadow-xl transition-shadow border-2 border-primary/20 hover:border-primary overflow-hidden ${
-                  isDisposableGlass ? "cursor-pointer" : ""
+                  hasRoute ? "cursor-pointer" : ""
                 }`}
-                onClick={isDisposableGlass ? (e) => {
+                onClick={hasRoute ? (e) => {
                   e.preventDefault();
                   e.stopPropagation();
-                  console.log("Disposable Glass card clicked!");
-                  navigate("/products/disposable-glass");
+                  navigate(productRouteMap[category.name]);
                 } : undefined}
               >
                 <CardContent className="p-0">
-                  {isDisposableGlass ? (
+                  {hasRoute ? (
                     <div style={{ cursor: 'pointer' }}>
                       <div className="aspect-square bg-muted rounded-t-lg overflow-hidden relative">
                         <img 

@@ -238,12 +238,14 @@ const ProductDetail = () => {
     setSelectedCategory(categoryName);
   }, []);
 
-  // Set default category to first category when product loads
+  // Reset and set default category when product changes
   useEffect(() => {
-    if (product && categories.length > 0 && !selectedCategory) {
+    if (product && categories.length > 0) {
       setSelectedCategory(categories[0].name);
+    } else {
+      setSelectedCategory(null);
     }
-  }, [product, categories, selectedCategory]);
+  }, [productName, product, categories]);
 
   if (!product) {
     return (
