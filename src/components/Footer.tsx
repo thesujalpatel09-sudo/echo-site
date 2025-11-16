@@ -134,7 +134,7 @@ const Footer = () => {
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-4">
           <p className="text-center text-gray-400 text-xs">
-            Copyright © 2025 | All Rights Reserved AISHINI
+            Copyright © 2025 | All Rights Reserved AISHINI ENTERPRISES
           </p>
         </div>
       </div>
