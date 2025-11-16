@@ -82,7 +82,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/products/cake-bakery" className="text-gray-300 hover:text-primary transition-colors">
-                  Packing Material
+                  Packaging Material
                 </Link>
               </li>
             </ul>

@@ -12,7 +12,7 @@ const Products = () => {
     "Disposable Glass": "/products/glass",
     "Disposable Plate & Bowl": "/products/disposable-plate-bowl",
     "Cutlery": "/products/cutlery",
-    "Packing Material": "/products/cake-bakery",
+    "Packaging Material": "/products/cake-bakery",
   };
 
   const productCategories = [
@@ -54,8 +54,8 @@ const Products = () => {
       ]
     },
     {
-      name: "Packing Material",
-      description: "Premium packing materials including cake boxes and pizza boxes for food packaging solutions",
+      name: "Packaging Material",
+      description: "Premium packaging materials including cake boxes and pizza boxes for food packaging solutions",
       items: ["Cake Box", "Pizza Box"],
       image: "https://uhbvqqeoujmoyqtkompi.supabase.co/storage/v1/object/public/Company%20logo/WhatsApp%20Image%202025-11-16%20at%208.54.25%20PM.jpeg",
       subcategories: [

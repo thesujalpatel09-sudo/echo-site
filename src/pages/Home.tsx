@@ -20,7 +20,7 @@ const Home = () => {
       link: "/products/cutlery"
     },
     { 
-      name: "Packing Material", 
+      name: "Packaging Material", 
       image: "https://uhbvqqeoujmoyqtkompi.supabase.co/storage/v1/object/public/Company%20logo/WhatsApp%20Image%202025-11-16%20at%208.54.25%20PM.jpeg",
       link: "/products/cake-bakery"
     },

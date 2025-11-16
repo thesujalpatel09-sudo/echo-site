@@ -193,7 +193,7 @@ const ProductDetail = () => {
     "cake-bakery": {
       categories: [
         {
-          name: "Packing Material",
+          name: "Packaging Material",
           products: [
             {
               name: "Cake Box",
@@ -223,7 +223,7 @@ const ProductDetail = () => {
       "disposable-glass": "Disposable Glass",
       "disposable-plate-bowl": "Disposable Plate & Bowl",
       "cutlery": "Cutlery",
-      "cake-bakery": "Packing Material"
+      "cake-bakery": "Packaging Material"
     };
     return displayNames[productName] || productName.replace(/-/g, " ").split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
   }, [productName]);
