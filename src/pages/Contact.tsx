@@ -1,79 +1,77 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const Contact = () => {
   return (
     <div className="w-full">
       {/* Page Hero */}
-      <section className="bg-gradient-to-br from-hero-gradient-from to-hero-gradient-to text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl">Get in touch with our team</p>
+      <section className="bg-gradient-to-br from-hero-gradient-from to-hero-gradient-to text-white py-12 sm:py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">Contact Us</h1>
+          <p className="text-base sm:text-lg md:text-xl">Get in touch with our team</p>
         </div>
       </section>
 
       {/* Contact Info & Form */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12">
+      <section className="py-12 sm:py-16 bg-background">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-12">
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold mb-8 text-primary">Get In Touch</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-primary">Get In Touch</h2>
               
               <div className="space-y-6">
-                <Card>
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <MapPin className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <Card className="hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in">
+                  <CardContent className="p-4 sm:p-6 flex items-start gap-3 sm:gap-4">
+                    <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0 mt-1 animate-pulse" />
                     <div>
-                      <h3 className="font-semibold text-lg mb-2">Address</h3>
-                      <p className="text-muted-foreground">
-                        WH 3, Al Qusais Industrial Area 5<br />
-                        Dubai, UAE
+                      <h3 className="font-semibold text-base sm:text-lg mb-2">Address</h3>
+                      <p className="text-sm sm:text-base text-muted-foreground">
+                        Plot No.9, Adarsh Welfare Society<br />
+                        Dachkul Pada Mira Road (E)<br />
+                        Near Kheteshwar Ashram<br />
+                        Thane - 401107
                       </p>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card>
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <Phone className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <Card className="hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in stagger-1">
+                  <CardContent className="p-4 sm:p-6 flex items-start gap-3 sm:gap-4">
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-semibold text-lg mb-2">Phone</h3>
-                      <p className="text-muted-foreground">
-                        <a href="tel:+971562109540" className="hover:text-primary">
-                          +971 56 210 9540
+                      <h3 className="font-semibold text-base sm:text-lg mb-2">Phone</h3>
+                      <p className="text-sm sm:text-base text-muted-foreground">
+                        <a href="tel:+919892126510" className="hover:text-primary">
+                          +91 9892126510
                         </a>
                       </p>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card>
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <Mail className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <Card className="hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in stagger-2">
+                  <CardContent className="p-4 sm:p-6 flex items-start gap-3 sm:gap-4">
+                    <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-semibold text-lg mb-2">Email</h3>
-                      <p className="text-muted-foreground">
-                        <a href="mailto:murtaza@alkahfgroup.com" className="hover:text-primary">
-                          murtaza@alkahfgroup.com
+                      <h3 className="font-semibold text-base sm:text-lg mb-2">Email</h3>
+                      <p className="text-sm sm:text-base text-muted-foreground">
+                        <a href="mailto:sales@aishinient.com" className="hover:text-primary">
+                          sales@aishinient.com
                         </a>
                       </p>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card>
-                  <CardContent className="p-6 flex items-start gap-4">
-                    <Clock className="w-6 h-6 text-primary flex-shrink-0 mt-1" />
+                <Card className="hover:shadow-lg transition-all duration-300 hover:scale-105 animate-fade-in stagger-3">
+                  <CardContent className="p-4 sm:p-6 flex items-start gap-3 sm:gap-4">
+                    <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-primary flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-semibold text-lg mb-2">Business Hours</h3>
-                      <p className="text-muted-foreground">
-                        Saturday - Thursday: 9:00 AM - 6:00 PM<br />
-                        Friday: Closed
+                      <h3 className="font-semibold text-base sm:text-lg mb-2">Business Hours</h3>
+                      <p className="text-sm sm:text-base text-muted-foreground">
+                        Monday - Saturday: 9:00 AM - 7:00 PM<br />
+                        Sunday: Closed
                       </p>
                     </div>
                   </CardContent>
@@ -83,59 +81,24 @@ const Contact = () => {
 
             {/* Contact Form */}
             <div>
-              <Card>
-                <CardContent className="p-8">
-                  <h2 className="text-3xl font-bold mb-6 text-primary">Send Us a Message</h2>
+              <Card className="animate-fade-in stagger-4">
+                <CardContent className="p-4 sm:p-6 md:p-8">
+                  <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-primary">Send Us a Message</h2>
                   
-                  <form className="space-y-6">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <label className="text-sm font-medium text-foreground mb-2 block">Your Name *</label>
-                        <Input placeholder="John Doe" required />
-                      </div>
-                      <div>
-                        <label className="text-sm font-medium text-foreground mb-2 block">Your Email *</label>
-                        <Input type="email" placeholder="john@example.com" required />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <label className="text-sm font-medium text-foreground mb-2 block">Mobile Number *</label>
-                        <Input placeholder="+971 XX XXX XXXX" required />
-                      </div>
-                      <div>
-                        <label className="text-sm font-medium text-foreground mb-2 block">Product Interest</label>
-                        <Select>
-                          <SelectTrigger>
-                            <SelectValue placeholder="Select a product" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="thermal">Thermal Paper Rolls</SelectItem>
-                            <SelectItem value="labels">Thermal Transfer Labels</SelectItem>
-                            <SelectItem value="ribbons">Wax & Resin Ribbons</SelectItem>
-                            <SelectItem value="pos">POS Paper Rolls</SelectItem>
-                            <SelectItem value="office">Office Supplies</SelectItem>
-                            <SelectItem value="other">Other</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">Your Message *</label>
-                      <Textarea 
-                        rows={5} 
-                        placeholder="Tell us about your requirements..." 
-                        required
-                        className="resize-none"
-                      />
-                    </div>
-
-                    <Button className="w-full bg-primary hover:bg-secondary text-primary-foreground h-12 text-lg">
-                      Send Message
-                    </Button>
-                  </form>
+                  <div className="w-full overflow-hidden">
+                    <iframe
+                      src="https://docs.google.com/forms/d/e/1FAIpQLSe78vyV_kKURVGUVOeeT0UqsCxbBEgXcEEgA9FeJBBu3ux8LQ/viewform?embedded=true"
+                      width="100%"
+                      height="700"
+                      frameBorder="0"
+                      marginHeight={0}
+                      marginWidth={0}
+                      className="w-full min-h-[600px] sm:min-h-[700px]"
+                      title="Contact Form"
+                    >
+                      Loading…
+                    </iframe>
+                  </div>
                 </CardContent>
               </Card>
             </div>
@@ -144,14 +107,15 @@ const Contact = () => {
       </section>
 
       {/* Map Section */}
-      <section className="h-96 bg-muted">
+      <section className="h-64 sm:h-80 md:h-96 bg-muted">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.4871861891!2d55.38!3d25.29!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDE3JzI0LjAiTiA1NcKwMjInNDguMCJF!5e0!3m2!1sen!2sae!4v1234567890"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.5!2d72.8934165!3d19.2733731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b1023d88140d%3A0x25f3ee621a245726!2sPLOT%20NO9%2C%20ADARSH%20WELFARE%20SOCIETY%2C%20Dachkul%20Pada%20Rd%2C%20near%20KHETESHWAR%20ASHRAM%2C%20Dajkul%20Pada%2C%20Mashachapada%2C%20Mira%20Road%20East%2C%20Mira%20Bhayandar%2C%20Maharashtra%20401107!5e0!3m2!1sen!2sin!4v1234567890"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           allowFullScreen
           loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
         />
       </section>
     </div>

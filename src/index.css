@@ -23,23 +23,23 @@ All colors MUST be HSL.
     --secondary: 142 70% 45%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 142 30% 96%;
+    --muted-foreground: 142 20% 30%;
 
-    --accent: 142 50% 50%;
+    --accent: 142 65% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 142 25% 88%;
+    --input: 142 25% 88%;
     --ring: 142 76% 36%;
 
     --radius: 0.75rem;
 
-    --top-bar: 142 70% 35%;
-    --footer-bg: 0 0% 0%;
+    --top-bar: 142 75% 25%;
+    --footer-bg: 142 40% 15%;
     --hero-gradient-from: 142 70% 45%;
     --hero-gradient-to: 142 76% 36%;
   }
@@ -50,7 +50,40 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .stagger-1 {
+    animation-delay: 0.1s;
+  }
+
+  .stagger-2 {
+    animation-delay: 0.2s;
+  }
+
+  .stagger-3 {
+    animation-delay: 0.3s;
+  }
+
+  .stagger-4 {
+    animation-delay: 0.4s;
   }
 }
