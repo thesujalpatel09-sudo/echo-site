@@ -36,7 +36,7 @@ const Home = () => {
         />
         
         <div className="container mx-auto px-4 sm:px-6 text-center relative z-10">
-          <p className="text-sm sm:text-base md:text-xl mb-3 sm:mb-4 uppercase tracking-wide">WELCOME TO AISHINA ENTERPRISES</p>
+          <p className="text-sm sm:text-base md:text-xl mb-3 sm:mb-4 uppercase tracking-wide">WELCOME TO AISHINI ENTERPRISES</p>
           <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-6 sm:mb-8 leading-tight max-w-5xl mx-auto px-2">
             Leading Manufacturer & Trader of Disposable Items
           </h1>
