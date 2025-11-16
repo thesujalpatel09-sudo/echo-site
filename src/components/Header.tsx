@@ -97,7 +97,7 @@ const Header = () => {
                               to="/products/cake-bakery"
                               className="block select-none rounded-md p-3 leading-normal no-underline outline-none transition-colors hover:bg-primary/10 hover:text-primary focus:bg-primary/10 focus:text-primary text-foreground"
                             >
-                              <div className="text-sm font-medium">Cake and Bakery</div>
+                              <div className="text-sm font-medium">Packing Material</div>
                             </Link>
                           </NavigationMenuLink>
                         </li>
@@ -169,7 +169,7 @@ const Header = () => {
                         onClick={() => setMobileMenuOpen(false)}
                         className="block text-base text-muted-foreground hover:text-primary transition-colors py-2"
                       >
-                        Cake and Bakery
+                        Packing Material
                       </Link>
                     </div>
                   </div>

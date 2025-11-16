@@ -193,13 +193,19 @@ const ProductDetail = () => {
     "cake-bakery": {
       categories: [
         {
-          name: "Cake Base",
+          name: "Packing Material",
           products: [
             {
-              name: "Cake Base",
-              image: "https://uhbvqqeoujmoyqtkompi.supabase.co/storage/v1/object/public/Company%20logo/7-inch.jpg",
-              description: "Premium cake bases for bakery products. Available in various sizes to fit different cake dimensions.",
+              name: "Cake Box",
+              image: "https://uhbvqqeoujmoyqtkompi.supabase.co/storage/v1/object/public/Company%20logo/WhatsApp%20Image%202025-11-16%20at%208.54.25%20PM.jpeg",
+              description: "Premium cake boxes for bakery products. Available in various sizes to fit different cake dimensions.",
               features: ["Various Sizes", "Secure Closure", "Food Safe", "Durable"]
+            },
+            {
+              name: "Pizza Box",
+              image: "https://uhbvqqeoujmoyqtkompi.supabase.co/storage/v1/object/public/Company%20logo/WhatsApp%20Image%202025-11-16%20at%209.04.00%20PM.jpeg",
+              description: "High-quality pizza boxes for food delivery and takeout. Available in various sizes to accommodate different pizza sizes.",
+              features: ["Various Sizes", "Grease Resistant", "Food Safe", "Stackable"]
             }
           ]
         }
@@ -217,7 +223,7 @@ const ProductDetail = () => {
       "disposable-glass": "Disposable Glass",
       "disposable-plate-bowl": "Disposable Plate & Bowl",
       "cutlery": "Cutlery",
-      "cake-bakery": "Cake and Bakery"
+      "cake-bakery": "Packing Material"
     };
     return displayNames[productName] || productName.replace(/-/g, " ").split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
   }, [productName]);
