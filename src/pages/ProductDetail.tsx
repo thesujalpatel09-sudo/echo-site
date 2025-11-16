@@ -238,14 +238,15 @@ const ProductDetail = () => {
     setSelectedCategory(categoryName);
   }, []);
 
-  // Reset and set default category when product changes
+  // Reset and set default category when product changes (only when productName changes)
   useEffect(() => {
-    if (product && categories.length > 0) {
-      setSelectedCategory(categories[0].name);
+    if (product && product.categories.length > 0) {
+      setSelectedCategory(product.categories[0].name);
     } else {
       setSelectedCategory(null);
     }
-  }, [productName, product, categories]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [productName]);
 
   if (!product) {
     return (
@@ -311,7 +312,7 @@ const ProductDetail = () => {
                       </h3>
                     </div>
                     
-                    {selectedCategoryProducts.length > 0 && (
+                    {selectedCategoryProducts.length > 0 ? (
                       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                         {selectedCategoryProducts.map((productItem, idx) => (
                             <Card key={idx} className="overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-300 animate-scale-in group"
@@ -350,6 +351,10 @@ const ProductDetail = () => {
                               </CardContent>
                             </Card>
                           ))}
+                      </div>
+                    ) : (
+                      <div className="text-center py-8 sm:py-12">
+                        <p className="text-muted-foreground text-base sm:text-lg">No products available in this category.</p>
                       </div>
                     )}
                   </div>
