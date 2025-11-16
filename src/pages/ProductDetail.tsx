@@ -1,4 +1,4 @@
-import { useState, useEffect, useLayoutEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -238,20 +238,24 @@ const ProductDetail = () => {
     setSelectedCategory(categoryName);
   }, []);
 
-  // Immediately reset selected category when product changes to prevent showing previous product
-  // Using useLayoutEffect to run synchronously before browser paint
-  useLayoutEffect(() => {
-    // Reset immediately when productName changes to clear previous product's data
-    setSelectedCategory(null);
-  }, [productName]);
+  // Track previous productName to detect changes
+  const prevProductNameRef = useRef<string | undefined>(productName);
 
-  // Set default category after reset
+  // Reset and set default category when product changes
   useEffect(() => {
-    if (product && product.categories.length > 0) {
-      setSelectedCategory(product.categories[0].name);
+    // Only reset if productName actually changed
+    if (prevProductNameRef.current !== productName) {
+      prevProductNameRef.current = productName;
+      
+      // Reset and set default category in the same render cycle
+      if (product && product.categories.length > 0) {
+        setSelectedCategory(product.categories[0].name);
+      } else {
+        setSelectedCategory(null);
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [productName, product]);
+  }, [productName]);
 
   if (!product) {
     return (
